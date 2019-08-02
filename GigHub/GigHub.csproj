@@ -201,8 +201,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908022042197_CreateGigTable.cs" />
+    <Compile Include="Migrations\201908022042197_CreateGigTable.Designer.cs">
+      <DependentUpon>201908022042197_CreateGigTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908022108434_OverrideConventionsForGigsAndGenres.cs" />
+    <Compile Include="Migrations\201908022108434_OverrideConventionsForGigsAndGenres.Designer.cs">
+      <DependentUpon>201908022108434_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -281,6 +293,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908022042197_CreateGigTable.resx">
+      <DependentUpon>201908022042197_CreateGigTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908022108434_OverrideConventionsForGigsAndGenres.resx">
+      <DependentUpon>201908022108434_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
