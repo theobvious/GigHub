@@ -6,7 +6,7 @@ using System.Web.Http;
 
 namespace GigHub.Controllers
 {
-    [Authorize]
+    [System.Web.Http.Authorize]
     public class FollowingsController : ApiController
     {
         private ApplicationDbContext _context;
@@ -16,7 +16,7 @@ namespace GigHub.Controllers
             _context = new ApplicationDbContext();
         }
 
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         public IHttpActionResult Follow(FollowingDto dto)
         {
             var userId = User.Identity.GetUserId();
